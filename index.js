@@ -5,7 +5,7 @@ const Article = require("./models/Article");
 
 app.use(express.json());
 
-let PORT = process.env.PORT || 3000;
+let PORT = 3000;
 
 app.listen(PORT, async () => {
   console.log(`I am listening on port : ${PORT}`);
