@@ -19,6 +19,10 @@ app.listen(PORT, async () => {
     );
 });
 
+app.get("/", async (req, res) => {
+  res.status(200).send("Mrhba-bicom !");
+});
+
 app.get("/findsum/:num1/:num2", (req, res) => {
   /* let num1 = req.params.num1;
   let num2 = req.params.num2; */
@@ -82,7 +86,7 @@ app.get("/article", async (req, res) => {
 app.get("/showarticle", async (req, res) => {
   const articles = await Article.find();
 
-  res.render("articls.ejs",{allarticles:articles});
+  res.render("articls.ejs", { allarticles: articles });
 });
 
 app.get("/article/:id", async (req, res) => {
